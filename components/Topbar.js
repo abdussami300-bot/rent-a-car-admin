@@ -14,7 +14,7 @@ export default function Topbar({ onToggleSidebar = () => {} }) {
         <div>
           <h1 style={styles.title}>OPERATIONS DASHBOARD</h1>
           <p className="topbar-subtitle" style={styles.subtitle}>
-            Rent-a-Car Pakistan • Master Control Console
+            Sayyarah Platform • Master Control Console
           </p>
         </div>
       </div>

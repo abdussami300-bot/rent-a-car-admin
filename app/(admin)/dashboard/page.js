@@ -92,7 +92,7 @@ export default function DashboardPage() {
       {/* Header section matching Flutter Admin Screen */}
       <div style={styles.header}>
         <div style={styles.headerLeft}>
-          <div style={styles.tagBadge}>RENT-A-CAR PAKISTAN</div>
+          <div style={styles.tagBadge}>SAYYARAH OPERATIONS</div>
           <h2 style={styles.title}>System Overview</h2>
           <p style={styles.subtitle}>
             Live Firestore operations, host verification queue, vehicle approvals, and fleet metrics.

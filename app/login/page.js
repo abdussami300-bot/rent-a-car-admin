@@ -103,10 +103,14 @@ export default function LoginPage() {
       <div style={styles.card}>
         {/* Brand Header */}
         <div style={styles.brandSection}>
-          <div style={styles.iconBox}>
-            <span style={styles.icon}>🛡️</span>
+          <div style={styles.logoBox}>
+            <img
+              src="/sayyarah-icon.png"
+              alt="Sayyarah Logo"
+              style={styles.logoImg}
+            />
           </div>
-          <div style={styles.tagBadge}>RENT-A-CAR PAKISTAN</div>
+          <div style={styles.tagBadge}>SAYYARAH PORTAL</div>
           <h1 style={styles.title}>Admin Console</h1>
           <p style={styles.subtitle}>Sign in with your admin credentials to access operations</p>
         </div>
@@ -130,7 +134,7 @@ export default function LoginPage() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="admin@rentacar.pk"
+              placeholder="admin@sayyarah.com"
               required
               autoComplete="email"
               disabled={loading}
@@ -203,19 +207,21 @@ const styles = {
     textAlign: "center",
     marginBottom: "28px",
   },
-  iconBox: {
-    width: "52px",
-    height: "52px",
-    borderRadius: "14px",
-    backgroundColor: "rgba(0, 180, 216, 0.15)",
-    border: "1px solid rgba(0, 180, 216, 0.35)",
+  logoBox: {
+    width: "64px",
+    height: "64px",
+    borderRadius: "16px",
     display: "inline-flex",
     alignItems: "center",
     justifyContent: "center",
     marginBottom: "14px",
+    boxShadow: "0 4px 16px rgba(0, 180, 216, 0.35)",
+    overflow: "hidden",
   },
-  icon: {
-    fontSize: "26px",
+  logoImg: {
+    width: "100%",
+    height: "100%",
+    objectFit: "contain",
   },
   tagBadge: {
     display: "inline-block",

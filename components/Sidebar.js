@@ -18,7 +18,7 @@ const navItems = [
 export default function Sidebar({ isOpen = false, onClose = () => {} }) {
   const pathname = usePathname();
   const router = useRouter();
-  const [adminEmail, setAdminEmail] = useState("admin@rentacar.pk");
+  const [adminEmail, setAdminEmail] = useState("admin@sayyarah.com");
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -46,12 +46,14 @@ export default function Sidebar({ isOpen = false, onClose = () => {} }) {
       {/* 1. Header / Brand with Mobile Close Button */}
       <div style={styles.brandContainer}>
         <div style={styles.brandLeft}>
-          <div style={styles.iconBox}>
-            <span style={styles.shieldIcon}>🛡️</span>
-          </div>
+          <img
+            src="/sayyarah-icon.png"
+            alt="Sayyarah Logo"
+            style={styles.brandLogo}
+          />
           <div>
-            <h2 style={styles.brandTitle}>ADMIN PANEL</h2>
-            <span style={styles.brandSubtitle}>Rent-a-Car Pakistan</span>
+            <h2 style={styles.brandTitle}>SAYYARAH</h2>
+            <span style={styles.brandSubtitle}>Admin Console</span>
           </div>
         </div>
 
@@ -156,22 +158,19 @@ const styles = {
     padding: "4px 8px",
     borderRadius: "6px",
   },
-  iconBox: {
-    padding: "10px",
-    backgroundColor: "rgba(0, 180, 216, 0.15)",
-    borderRadius: "12px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  shieldIcon: {
-    fontSize: "22px",
+  brandLogo: {
+    width: "38px",
+    height: "38px",
+    borderRadius: "10px",
+    objectFit: "contain",
+    boxShadow: "0 2px 10px rgba(0, 180, 216, 0.3)",
+    flexShrink: 0,
   },
   brandTitle: {
-    fontSize: "16px",
+    fontSize: "17px",
     fontWeight: "900",
     color: "#FFFFFF",
-    letterSpacing: "1.1px",
+    letterSpacing: "1.2px",
     margin: 0,
     lineHeight: 1.2,
   },
